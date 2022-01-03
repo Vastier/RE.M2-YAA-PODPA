@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mais uma Página do APOD da NASA trazendo uma foto de Astronomia cada dia.">
+    
+    <!-- Favicon generated here: https://favicon.io/ -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/src/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/src/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/src/img/favicon-16x16.png">
+    <link rel="manifest" href="/src/img/site.webmanifest">
+
+    <title>Yet Another APOD Page</title>
+
+    <!-- Local CSS -->
+    <link rel="stylesheet" href="./src/css/style.css">
+
+    <!-- Windows XP CSS Style -->
+    <link rel="stylesheet" href="https://unpkg.com/xp.css">
+
+    <!-- jQuery 3.6.0 from https://code.jquery.com/  -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Moment.js is now recommending using other alternatives, Luxon is one of those and made by a Moment.js long-time contributor.  -->
+    <script src="https://moment.github.io/luxon/global/luxon.js"></script>
+
+    <!-- Local Javascript using MVC pattern -->
+    <script src="./src/js/controller/apod-controller.js"></script>
+    <script src="./src/js/model/apod-model.js"></script>
+    <script src="./src/js/view/apod-view.js"></script>
+    <script src="./src/js/main.js"></script>
+
+    <!-- JS included in head so the AJAX request for today's APOD image can be done before the page loads. -->
+
+</head>
+<body>
+
+
+
+    <div class="window" >
+        <div class="title-bar">
+          <div class="title-bar-text">Yet Another APOD Page</div>
+        </div>
+
+
+        <div class="window-body">
+        
+          <p id='topmenu'>Escolha uma data: 
+          <input type="date" name="usrdate" id="usrdate">
+          <button id='datebtn'>Ver esse dia</button>
+          <button id='randombtn'>Ver dia aleatório</button>
+          </p>
+          
+
+          <div class="apod">
+
+            
+            <div class="media">
+              <div class="picture">
+                <img id="picture" src="#" alt="">
+              </div>
+              <div class="video">
+                <iframe id='video' src="#" frameborder="0"></iframe>
+              </div>
+              <div class="other">
+                <h4 id='other'></h4>
+                <a id='otherLink' href="#"></a>
+              </div>
+
+            
+            </div> <!-- .media -->
+
+            <div class="info">
+              <div class="title">
+                <p id='title'></p>
+              </div>
+              <div class="text">
+                <p id='desc'></p>
+              </div>
+              <div class="copyright">
+
+              </div>
+            </div> <!-- .info -->
+          </div> <!-- .apod -->
+
+        </div> <!-- .window-body -->
+        
+        <div class="status-bar">
+        <p class="status-bar-field">Escolha uma data ou clique em aleatório...</p>
+        </div>
+
+    </div> <!-- .window -->
+
+    
+    
+
+</body>
+</html>
